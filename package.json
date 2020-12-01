@@ -1,0 +1,26 @@
+{
+  "name": "tao",
+  "version": "1.0.0",
+  "description": "道可道，非常道。名可名，非常名。",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nashaofu/tao.git"
+  },
+  "keywords": [
+    "tao",
+    "道"
+  ],
+  "author": "nashaofu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nashaofu/tao/issues"
+  },
+  "homepage": "https://github.com/nashaofu/tao#readme",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}
