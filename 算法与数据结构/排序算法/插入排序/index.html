@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>插入排序 | Tao</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    
+    <meta name="description" content="道可道，非常道。名可名，非常名。">
+    
+    <link rel="preload" href="/tao/assets/css/0.styles.93b81f4b.css" as="style"><link rel="preload" href="/tao/assets/js/app.1e8789d6.js" as="script"><link rel="preload" href="/tao/assets/js/2.ce0f4ae0.js" as="script"><link rel="preload" href="/tao/assets/js/13.899a235e.js" as="script"><link rel="prefetch" href="/tao/assets/js/10.d8dea927.js"><link rel="prefetch" href="/tao/assets/js/11.0ac2f27b.js"><link rel="prefetch" href="/tao/assets/js/12.654b2116.js"><link rel="prefetch" href="/tao/assets/js/14.62d7e992.js"><link rel="prefetch" href="/tao/assets/js/15.cf350c18.js"><link rel="prefetch" href="/tao/assets/js/16.5980ea97.js"><link rel="prefetch" href="/tao/assets/js/17.ffc3d6cd.js"><link rel="prefetch" href="/tao/assets/js/18.1082ae5a.js"><link rel="prefetch" href="/tao/assets/js/19.f7090cc2.js"><link rel="prefetch" href="/tao/assets/js/20.39ce411c.js"><link rel="prefetch" href="/tao/assets/js/21.b723374e.js"><link rel="prefetch" href="/tao/assets/js/22.39c8e7d1.js"><link rel="prefetch" href="/tao/assets/js/23.d6c77dd0.js"><link rel="prefetch" href="/tao/assets/js/24.84ec373e.js"><link rel="prefetch" href="/tao/assets/js/25.154d0f55.js"><link rel="prefetch" href="/tao/assets/js/26.ec9cc326.js"><link rel="prefetch" href="/tao/assets/js/27.5c888710.js"><link rel="prefetch" href="/tao/assets/js/3.f15bb682.js"><link rel="prefetch" href="/tao/assets/js/4.07292b31.js"><link rel="prefetch" href="/tao/assets/js/5.1f516290.js"><link rel="prefetch" href="/tao/assets/js/6.2c249145.js"><link rel="prefetch" href="/tao/assets/js/7.4e117711.js"><link rel="prefetch" href="/tao/assets/js/8.17ac71aa.js"><link rel="prefetch" href="/tao/assets/js/9.69be05d4.js">
+    <link rel="stylesheet" href="/tao/assets/css/0.styles.93b81f4b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/tao/" class="home-link router-link-active"><!----> <span class="site-name">Tao</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/tao/道德经.html" class="nav-link">
+  道德经
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js 知识" class="dropdown-title"><span class="title">js 知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="js 知识" class="mobile-dropdown-title"><span class="title">js 知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tao/js 知识/防抖/" class="nav-link">
+  防抖
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/节流/" class="nav-link">
+  节流
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/camelCase 实现/" class="nav-link">
+  camelCase 实现
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/Promise/" class="nav-link">
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/类与类的继承/" class="nav-link">
+  类与类的继承
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法与数据结构" class="dropdown-title"><span class="title">算法与数据结构</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法与数据结构" class="mobile-dropdown-title"><span class="title">算法与数据结构</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/堆/" class="nav-link">
+  堆
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/二叉树/" class="nav-link">
+  二叉树
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/排序算法/" class="nav-link">
+  排序算法
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/拓扑排序/" class="nav-link">
+  拓扑排序
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/洗牌算法/" class="nav-link">
+  洗牌算法
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/大数加法/" class="nav-link">
+  大数加法
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/反转链表/" class="nav-link">
+  反转链表
+</a></li></ul></div></div> <a href="https://github.com/nashaofu/tao" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/tao/道德经.html" class="nav-link">
+  道德经
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js 知识" class="dropdown-title"><span class="title">js 知识</span> <span class="arrow down"></span></button> <button type="button" aria-label="js 知识" class="mobile-dropdown-title"><span class="title">js 知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tao/js 知识/防抖/" class="nav-link">
+  防抖
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/节流/" class="nav-link">
+  节流
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/camelCase 实现/" class="nav-link">
+  camelCase 实现
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/Promise/" class="nav-link">
+  Promise
+</a></li><li class="dropdown-item"><!----> <a href="/tao/js 知识/类与类的继承/" class="nav-link">
+  类与类的继承
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="算法与数据结构" class="dropdown-title"><span class="title">算法与数据结构</span> <span class="arrow down"></span></button> <button type="button" aria-label="算法与数据结构" class="mobile-dropdown-title"><span class="title">算法与数据结构</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/堆/" class="nav-link">
+  堆
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/二叉树/" class="nav-link">
+  二叉树
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/排序算法/" class="nav-link">
+  排序算法
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/拓扑排序/" class="nav-link">
+  拓扑排序
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/洗牌算法/" class="nav-link">
+  洗牌算法
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/大数加法/" class="nav-link">
+  大数加法
+</a></li><li class="dropdown-item"><!----> <a href="/tao/算法与数据结构/反转链表/" class="nav-link">
+  反转链表
+</a></li></ul></div></div> <a href="https://github.com/nashaofu/tao" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>插入排序</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tao/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/#算法步骤" class="sidebar-link">算法步骤</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/tao/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/#动图演示" class="sidebar-link">动图演示</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/tao/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/#代码实现" class="sidebar-link">代码实现</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="插入排序"><a href="#插入排序" class="header-anchor">#</a> 插入排序</h1> <p>插入排序和打扑克牌一样，摸到一张牌，然后和手里的每一张牌对比，把摸到的牌插入到正确位置（对比大小）。</p> <h2 id="算法步骤"><a href="#算法步骤" class="header-anchor">#</a> 算法步骤</h2> <p>将第一待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。）</p> <h2 id="动图演示"><a href="#动图演示" class="header-anchor">#</a> 动图演示</h2> <p><img src="/tao/assets/img/insertionSort.be81c151.gif" alt="insertionSort"></p> <h2 id="代码实现"><a href="#代码实现" class="header-anchor">#</a> 代码实现</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 插入排序</span>
+<span class="token comment">// 从小到大</span>
+<span class="token comment">// 循环次数为(n-1)+(n-2)+(n-3)+...+(n-(n-1)) =&gt; n(n-2)所以复杂度为O(n^2)</span>
+<span class="token keyword">function</span> <span class="token function">insertionSort</span><span class="token punctuation">(</span><span class="token parameter">arr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 排序轮数为 length - 1 次</span>
+  <span class="token comment">// 选择一个数，然后和前面已经排好序的进行比较</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 当前值比前面的已排序的最后一个元素小，说明需要排序，否则就不用排序了</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> j <span class="token operator">=</span> i<span class="token punctuation">;</span> j <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr<span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span> j<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+      arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>
+      arr<span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp
+    <span class="token punctuation">}</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> arr
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token function">insertionSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/nashaofu/tao/edit/master/docs/算法与数据结构/排序算法/插入排序/README.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">12/10/2020, 11:55:43 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/tao/assets/js/app.1e8789d6.js" defer></script><script src="/tao/assets/js/2.ce0f4ae0.js" defer></script><script src="/tao/assets/js/13.899a235e.js" defer></script>
+  </body>
+</html>
