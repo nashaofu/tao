@@ -16,6 +16,31 @@ module.exports = {
         link: '/道德经'
       },
       {
+        text: 'js 知识',
+        items: [
+          {
+            text: '防抖',
+            link: '/js 知识/防抖/'
+          },
+          {
+            text: '节流',
+            link: '/js 知识/节流/'
+          },
+          {
+            text: 'camelCase 实现',
+            link: '/js 知识/camelCase 实现/'
+          },
+          {
+            text: 'Promise',
+            link: '/js 知识/Promise/'
+          },
+          {
+            text: '类与类的继承',
+            link: '/js 知识/类与类的继承/'
+          }
+        ]
+      },
+      {
         text: '算法与数据结构',
         items: [
           {
