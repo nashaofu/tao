@@ -12,10 +12,6 @@ module.exports = {
     lastUpdated: '上次更新',
     nav: [
       {
-        text: '道德经',
-        link: '/道德经'
-      },
-      {
         text: 'js 知识',
         items: [
           {
