@@ -1,11 +1,11 @@
 module.exports = {
-  title: 'Tao',
+  title: '术与道',
   description: '道可道，非常道。名可名，非常名。',
-  base: '/tao/',
+  base: '/shuyudao/',
   themeConfig: {
     sidebar: 'auto',
     smoothScroll: true,
-    repo: 'nashaofu/tao',
+    repo: 'nashaofu/shuyudao',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
