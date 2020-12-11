@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: https://raw.githubusercontent.com/nashaofu/nashaofu/master/avatar.svg
-actionText: Start →
-actionLink: /Github
+actionText: 关于我 →
+actionLink: /AboutMe
 features:
   - title: 算法
     details: 有道无术，术尚可求也。有术无道，止于术。

@@ -2,6 +2,19 @@ module.exports = {
   title: '术与道',
   description: '道可道，非常道。名可名，非常名。',
   base: '/shuyudao/',
+  head: [
+    [
+      'script',
+      {},
+      `var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?976ca6952ba36abeabf574846f39a073";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();`
+    ]
+  ],
   themeConfig: {
     sidebar: 'auto',
     smoothScroll: true,
