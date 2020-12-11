@@ -6,7 +6,8 @@ module.exports = {
     [
       'script',
       {},
-      `var _hmt = _hmt || [];
+      `
+    var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?976ca6952ba36abeabf574846f39a073";
