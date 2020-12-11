@@ -35,9 +35,3 @@
 获得二叉树深度
 
 <<< @/docs/算法与数据结构/二叉树/depth.js
-
-## 目录
-
-- [二叉树遍历](./binaryTree.js)
-- [AVL 树](./avl.js)
-- [字典树](./trie.js)
