@@ -1,4 +1,4 @@
-# 术与道
-道可道，非常道。名可名，非常名。
+# 专治疑难杂症
+Talk is cheap,show me the code.
 
-https://nashaofu.github.io/shuyudao
+https://nashaofu.github.io/zzynzz

@@ -1,7 +1,7 @@
 module.exports = {
-  title: '术与道',
-  description: '道可道，非常道。名可名，非常名。',
-  base: '/shuyudao/',
+  title: '专治疑难杂症',
+  description: 'Talk is cheap,show me the code.',
+  base: '/zzynzz/',
   head: [
     [
       'script',
@@ -19,7 +19,7 @@ module.exports = {
   themeConfig: {
     sidebar: 'auto',
     smoothScroll: true,
-    repo: 'nashaofu/shuyudao',
+    repo: 'nashaofu/zzynzz',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
@@ -47,6 +47,15 @@ module.exports = {
           {
             text: '类与类的继承',
             link: '/js 知识/类与类的继承/'
+          }
+        ]
+      },
+      {
+        text: '前端',
+        items: [
+          {
+              text: '在项目中落地 polyfill.io',
+              link: '/前端/在项目中落地 polyfill.io/'
           }
         ]
       },

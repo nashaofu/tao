@@ -45,7 +45,7 @@ module.exports = {
 
 然后我们开始打包项目。既然做了修改，那我们就对比一下打包生成的 js 的大小吧，一比较才发现，修改后的文件竟然比修改前的足足大了几百 KB。
 
-![这不科学](./这不科学.jpeg)
+![这不科学](./zbkx.jpeg)
 
 对打包生成的文件进行分析发下，文件里面生成了很多重复的代码，例如源码为：
 
@@ -117,7 +117,7 @@ exports.default = Hello
 
 我们可以看到生成的文件中包含了`_classCallCheck`、`_defineProperties`、`_createClass`等内容，检查多个文件后发现，每个包含`class`的源文件生成的代码都包含了前面的这几个函数，他们之间没有被复用。
 
-![这不对呀](./这不对呀.jpg)
+![这不对呀](./zbdy.jpg)
 
 为啥 helper 函数不能被复用呢？这里和`@babel/plugin-transform-runtime`这个插件有关，这个插件的官方文档是这样说的，`_A plugin that enables the re-use of Babel's injected helper code to save on codesize.（一个可以重复使用 Babel 的注入的 helper 代码来节省代码大小插件。）_”，经过一番文档查阅，变更后的 babel 配置如下：
 
